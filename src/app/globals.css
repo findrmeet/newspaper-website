@@ -15,7 +15,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #fff;
   }
 }
 
@@ -28,5 +28,4 @@ body {
 .custom-container {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
