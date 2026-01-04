@@ -10,11 +10,11 @@ const Navbar = () => {
     <div className="bg-blue-900 px-4 sm:bg-transparent flex flex-col sm:flex-row justify-between sm:items-center py-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Menu className="sm:hidden text-white" />
+          <Menu className="sm:hidden text-white cursor-pointer" />
           <Logo />
         </div>
         <Image
-          className="sm:hidden"
+          className="sm:hidden cursor-pointer"
           src={"/avater.svg"}
           width={34}
           height={34}
