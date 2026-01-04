@@ -18,27 +18,23 @@ const Navbar = () => {
 
   // Toggle the mobile menu
   const toggleMenu = () => setIsOpen((prev) => !prev);
-
   useGSAP(
     () => {
-      if (mobileNavRef.current) {
-        gsap.fromTo(
-          mobileNavRef.current,
-          { x: "-100%", opacity: 0 },
-          {
-            x: "0%",
-            opacity: 1,
-            duration: 0.5,
-            ease: "power3.out",
-          }
-        );
-      }
+      // Only run if the element exists
+      if (!mobileNavRef.current) return;
+
+      // When opening (isOpen === true): animate FROM off-screen TO visible
+      // When closing (isOpen === false): animate FROM visible TO off-screen (reverse)
+      gsap.to(mobileNavRef.current, {
+        x: isOpen ? "0%" : "-100%",
+        opacity: isOpen ? 1 : 0,
+        duration: 0.5,
+        ease: "power3.out",
+      });
     },
     {
-      dependencies: [isOpen], // Re-run when isOpen changes
+      dependencies: [isOpen], // Re-run every time isOpen changes
       scope: mobileNavRef,
-      // Reset position when closing (for clean reverse)
-      revertOnUpdate: true,
     }
   );
   return (
@@ -46,7 +42,10 @@ const Navbar = () => {
       <div className="bg-blue-900  px-4 sm:bg-transparent flex flex-col sm:flex-row justify-between sm:items-center py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Menu className="sm:hidden text-white cursor-pointer" />
+            <Menu
+              className="sm:hidden text-white cursor-pointer"
+              onClick={toggleMenu}
+            />
             <Logo />
           </div>
           <Image
