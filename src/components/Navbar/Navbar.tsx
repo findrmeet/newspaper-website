@@ -5,12 +5,12 @@ import NavMenu from "./NavMenu";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center py-4">
+    <div className="flex flex-col sm:flex-row justify-between items-center py-4">
       <Logo />
-      <div className="flex items-center gap-8">
+      <div className="flex items-center gap-8 sm:w-min w-full">
         <SearchForm />
         <NavMenu />
-        <div>
+        <div className="hidden sm:block">
           <LoginBtn />
         </div>
       </div>

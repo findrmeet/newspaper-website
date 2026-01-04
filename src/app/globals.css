@@ -24,3 +24,9 @@ body {
   color: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.custom-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
