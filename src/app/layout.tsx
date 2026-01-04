@@ -18,9 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${redHatDisplay.className} custom-container`}>
-        {children}
-      </body>
+      <body className={`${redHatDisplay.className} `}>{children}</body>
     </html>
   );
 }

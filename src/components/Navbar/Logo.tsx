@@ -5,7 +5,7 @@ const Logo = () => {
     <div className="flex items-center gap-2.5">
       <Image src="/logo.svg" alt="Logo" width={56} height={56} />
       <div>
-        <h1 className="uppercase font-bold text-2xl text-white sm:text-black">
+        <h1 className="uppercase font-extrabold text-2xl text-white sm:text-black">
           All Bangla
         </h1>
         <span className="px-3 space-x-2.5 uppercase font-normal text-xs text-white bg-[#505EFF]">

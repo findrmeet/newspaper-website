@@ -39,7 +39,7 @@ const Navbar = () => {
   );
   return (
     <>
-      <div className="bg-blue-900  px-4 sm:bg-transparent flex flex-col sm:flex-row justify-between sm:items-center py-4">
+      <div className="bg-blue-900  px-4 sm:bg-transparent flex flex-col sm:flex-row justify-between sm:items-center py-4 custom-container">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Menu
