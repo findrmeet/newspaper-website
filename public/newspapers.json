@@ -1,26 +1,48 @@
 [
   {
-    "imageLink": "prothom-alo.svg",
-    "altTag": "Prothom Alo"
+    "category": "All Bangla Newspapers",
+    "cards": [
+      {
+        "name": "Prothom Alo",
+        "imageLink": "prothom-alo.svg",
+        "altTag": "Prothom Alo Newspaper"
+      }
+    ]
   },
   {
-    "imageLink": "bd-protidin.svg",
-    "altTag": "BD Protidin"
+    "category": "Bangladesh E-Paper",
+    "cards": []
   },
   {
-    "imageLink": "jugantor.svg",
-    "altTag": "Jugantor"
+    "category": "All Online Newspapers",
+    "cards": []
   },
   {
-    "imageLink": "manabkantho.svg",
-    "altTag": "Manabkantho"
+    "category": "All Local Newspapers",
+    "cards": []
   },
   {
-    "imageLink": "songbad.svg",
-    "altTag": "Songbad"
+    "category": "Bangladesh Division Newspapers",
+    "cards": []
   },
   {
-    "imageLink": "khabar-patro.svg",
-    "altTag": "Khabar Patro"
+    "category": "All Bangladeshi English Newspapers",
+    "cards": []
+  },
+  {
+    "category": "All Bangla TV Channels News",
+    "cards": []
+  },
+  {
+    "category": "All Bangladesh Share Bazer Newspapers",
+    "cards": []
+  },
+  {
+    "category": "All West Bangla Newspapers Kolkata",
+    "cards": []
+  },
+  {
+    "category": "All Assam Newspapers",
+    "cards": []
   }
 ]
