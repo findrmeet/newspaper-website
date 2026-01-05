@@ -26,15 +26,19 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="sm:flex gap-4 grid grid-cols-2 sm:flex-wrap">
-      {newspaperData &&
-        newspaperData.map((newspaper, index) => (
-          <Card
-            key={index}
-            imageLink={newspaper.imageLink}
-            altTag={newspaper.altTag}
-          />
-        ))}
-    </div>
+    <>
+      <h2 className="p-2 bg-[#0064F71A] sm:hidden">All Bangla Newspapers</h2>
+      <div className="w-[50%] bg-[#0064F7] h-0.5  sm:hidden"></div>
+      <div className="sm:flex gap-4 grid grid-cols-2 sm:flex-wrap sm:mt-0 mt-4">
+        {newspaperData &&
+          newspaperData.map((newspaper, index) => (
+            <Card
+              key={index}
+              imageLink={newspaper.imageLink}
+              altTag={newspaper.altTag}
+            />
+          ))}
+      </div>
+    </>
   );
 }
