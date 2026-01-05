@@ -23,9 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${redHatDisplay.className}`}>
         <Navbar />
-        <div className="flex custom-container py-6 gap-4">
+        <div className="flex custom-container py-6 gap-4 px-4 sm:px-0">
           <Sidebar />
-          <main className=" flex-1">{children}</main>
+          <main className="flex-1">{children}</main>
         </div>
         <Footer />
       </body>
