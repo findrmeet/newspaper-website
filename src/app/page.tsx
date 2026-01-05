@@ -83,11 +83,15 @@ export default function Home() {
               ref={(el) => {
                 if (el) sectionRefs.current[groupIndex] = el;
               }}
-              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4"
             >
               {group.cards.map((card, index) => (
                 <div key={index} className="card-item">
-                  <Card imageLink={card.imageLink} altTag={card.altTag} />
+                  <Card
+                    name={card.name}
+                    imageLink={card.imageLink}
+                    altTag={card.altTag}
+                  />
                 </div>
               ))}
             </div>

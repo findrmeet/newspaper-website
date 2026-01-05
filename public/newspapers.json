@@ -6,16 +6,163 @@
         "name": "Prothom Alo",
         "imageLink": "prothom-alo.svg",
         "altTag": "Prothom Alo Newspaper"
+      },
+      {
+        "name": "Jugantor",
+        "imageLink": "jugantor.svg",
+        "altTag": "Jugantor Newspaper"
+      },
+      {
+        "name": "Khabar Patro",
+        "imageLink": "khabar-patro.svg",
+        "altTag": "Khabar Patro Newspaper"
+      },
+      {
+        "name": "Manab Kantho",
+        "imageLink": "manabkantho.svg",
+        "altTag": "Manab Kantho Newspaper"
+      },
+      {
+        "name": "Songbad",
+        "imageLink": "songbad.svg",
+        "altTag": "Songbad Newspaper"
+      },
+      {
+        "name": "Bd Protidin",
+        "imageLink": "bd-protidin.svg",
+        "altTag": "Bd Protidin Newspaper"
       }
     ]
   },
   {
     "category": "Bangladesh E-Paper",
-    "cards": []
+    "cards": [
+      {
+        "name": "Banik Barta",
+        "imageLink": "/banik-barta.png",
+        "altTag": "Banik Barta E-Paper"
+      },
+      {
+        "name": "E-Show Biz",
+        "imageLink": "/e-show-biz.png",
+        "altTag": "E-Show Biz E-Paper"
+      },
+      {
+        "name": "Inqilab",
+        "imageLink": "/inqilub.png",
+        "altTag": "Inqilab E-Paper"
+      },
+      {
+        "name": "Ittefaq",
+        "imageLink": "/ittefaq.png",
+        "altTag": "Ittefaq E-Paper"
+      },
+      {
+        "name": "Kaler Kantho",
+        "imageLink": "/kalerkontho.png",
+        "altTag": "Kaler Kantho E-Paper"
+      },
+      {
+        "name": "Somokal",
+        "imageLink": "/somokal.png",
+        "altTag": "Somokal E-Paper"
+      },
+      {
+        "name": "The Business Standard",
+        "imageLink": "/the-business-standard.png",
+        "altTag": "The Business Standard E-Paper"
+      },
+      {
+        "name": "The Daily Star",
+        "imageLink": "/the-daily-star.png",
+        "altTag": "The Daily Star E-Paper"
+      },
+      {
+        "name": "Vorer Kagoj",
+        "imageLink": "/vorer-kagoj.png",
+        "altTag": "Vorer Kagoj E-Paper"
+      }
+    ]
   },
   {
     "category": "All Online Newspapers",
-    "cards": []
+    "cards": [
+      {
+        "name": "Alert News 24",
+        "imageLink": "/alertnews24.png",
+        "altTag": "Alert News 24 Online Newspaper"
+      },
+      {
+        "name": "Arthosuchak",
+        "imageLink": "/arthosuchok.png",
+        "altTag": "Arthosuchak Online Newspaper"
+      },
+      {
+        "name": "Bangla News 24",
+        "imageLink": "/banglanews24.png",
+        "altTag": "Bangla News 24 Online Newspaper"
+      },
+      {
+        "name": "Barta 24",
+        "imageLink": "/barta24.png",
+        "altTag": "Barta 24 Online Newspaper"
+      },
+      {
+        "name": "BD News 24",
+        "imageLink": "/bdnews24.png",
+        "altTag": "BD News 24 Online Newspaper"
+      },
+      {
+        "name": "Dhaka Post",
+        "imageLink": "/dhakapost.png",
+        "altTag": "Dhaka Post Online Newspaper"
+      },
+      {
+        "name": "Jago News 24",
+        "imageLink": "/jagonews24.png",
+        "altTag": "Jago News 24 Online Newspaper"
+      },
+      {
+        "name": "Khobor 24",
+        "imageLink": "/khobor24.png",
+        "altTag": "Khobor 24 Online Newspaper"
+      },
+      {
+        "name": "Priyo",
+        "imageLink": "/priyo.png",
+        "altTag": "Priyo Online Newspaper"
+      },
+      {
+        "name": "Rising BD",
+        "imageLink": "/risingbd.png",
+        "altTag": "Rising BD Online Newspaper"
+      }
+    ]
+  },
+  {
+    "category": "All Bangla TV Channels",
+    "cards": [
+      {
+        "name": "Channel 24",
+        "imageLink": "/channel24.png",
+        "altTag": "Channel 24 Bangla TV News"
+      },
+      {
+        "name": "Channel i",
+        "imageLink": "/channel-i.png",
+        "altTag": "Channel i Bangla TV News"
+      },
+      {
+        "name": "Independent TV",
+        "imageLink": "/independent.png",
+        "altTag": "Independent TV Bangla News"
+      },
+      {
+        "name": "Jamuna TV",
+        "imageLink": "/jamunatv.png",
+        "altTag": "Jamuna TV Bangla News"
+      }
+    ]
   },
   {
     "category": "All Local Newspapers",
@@ -29,10 +176,7 @@
     "category": "All Bangladeshi English Newspapers",
     "cards": []
   },
-  {
-    "category": "All Bangla TV Channels News",
-    "cards": []
-  },
+
   {
     "category": "All Bangladesh Share Bazer Newspapers",
     "cards": []
