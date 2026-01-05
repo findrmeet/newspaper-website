@@ -4,6 +4,7 @@ import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar/Sidebar";
+import { NewspaperProvider } from "@/context/NewspaperContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,12 +23,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${redHatDisplay.className}`}>
-        <Navbar />
-        <div className="flex custom-container py-6 gap-4 px-4 sm:px-0">
-          <Sidebar />
-          <main className="flex-1">{children}</main>
-        </div>
-        <Footer />
+        <NewspaperProvider>
+          <Navbar />
+          <div className="flex custom-container py-6 gap-4 px-4 sm:px-0">
+            <Sidebar />
+            <main className="flex-1">{children}</main>
+          </div>
+          <Footer />
+        </NewspaperProvider>
       </body>
     </html>
   );

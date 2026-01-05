@@ -1,78 +1,62 @@
 "use client";
 
 import Card from "@/components/Card/Card";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { NewspaperContext } from "@/context/NewspaperContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface CardItem {
-  name: string;
-  imageLink: string;
-  altTag: string;
-}
-
-interface CategoryGroup {
-  category: string;
-  cards: CardItem[];
-}
-
 export default function Home() {
-  const [newspaperData, setNewspaperData] = useState<CategoryGroup[] | null>(
-    null
+  const ctx = useContext(NewspaperContext);
+
+  if (!ctx) return null;
+
+  const { data, activeCategory } = ctx;
+
+  const sectionRefs = useRef<HTMLDivElement[]>([]);
+
+  const filteredData = data.filter(
+    (group) => group.category === activeCategory
   );
-  const gridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const fetchNewspaperData = async () => {
-      try {
-        const response = await fetch("/newspapers.json");
-        const data: CategoryGroup[] = await response.json();
-        setNewspaperData(data);
-      } catch (error) {
-        console.error("Error fetching newspaper data:", error);
-      }
-    };
+    sectionRefs.current.forEach((section) => {
+      if (!section) return;
 
-    fetchNewspaperData();
-  }, []);
+      const cards = section.querySelectorAll(".card-item");
+      gsap.set(cards, { opacity: 0, y: 50 });
 
-  useEffect(() => {
-    if (!newspaperData || !gridRef.current) return;
+      const ctxGsap = gsap.context(() => {
+        gsap.to(cards, {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          stagger: 0.12,
+          scrollTrigger: {
+            trigger: section,
+            start: "top 85%",
+          },
+        });
+      }, section);
 
-    const cards = gridRef.current.querySelectorAll(".card-item");
-
-    gsap.set(cards, { opacity: 0, y: 50 });
-
-    const ctx = gsap.context(() => {
-      gsap.to(cards, {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        stagger: 0.12,
-        scrollTrigger: {
-          trigger: gridRef.current,
-          start: "top 85%",
-        },
-      });
-    }, gridRef);
-
-    return () => ctx.revert();
-  }, [newspaperData]);
+      return () => ctxGsap.revert();
+    });
+  }, [filteredData]);
 
   return (
     <>
-      {newspaperData?.map((group, groupIndex) => (
+      {filteredData.map((group, groupIndex) => (
         <section key={groupIndex} className="mb-10">
-          {/* Category Header */}
           <h2 className="bg-[#0064F71A] p-2 sm:hidden">{group.category}</h2>
           <div className="h-0.5 w-1/2 bg-[#0064F7] sm:hidden mb-4"></div>
 
-          {/* Cards Grid */}
           <div
-            ref={gridRef}
+            ref={(el) => {
+              if (el) sectionRefs.current[groupIndex] = el;
+            }}
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
           >
             {group.cards.map((card, index) => (
