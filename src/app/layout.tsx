@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Red_Hat_Display } from "next/font/google";
+import Footer from "@/components/Footer/Footer";
+import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
+import Sidebar from "@/components/Sidebar/Sidebar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${redHatDisplay.className} `}>{children}</body>
+      <body className={`${redHatDisplay.className}`}>
+        <Navbar />
+        <div className="flex custom-container py-6 gap-4">
+          <Sidebar />
+          <main className=" flex-1">{children}</main>
+        </div>
+        <Footer />
+      </body>
     </html>
   );
 }

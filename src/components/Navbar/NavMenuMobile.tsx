@@ -10,7 +10,10 @@ interface NavMenuMobileProps {
 const NavMenuMobile = React.forwardRef<HTMLDivElement, NavMenuMobileProps>(
   (props, ref) => {
     return (
-      <div ref={ref} className="absolute sm:hidden top-0 bg-white w-full">
+      <div
+        ref={ref}
+        className="absolute sm:hidden top-0 bg-white w-full shadow-xl"
+      >
         <div className="p-6">
           <div className="flex justify-between relative">
             <h2 className="w-full uppercase border-b border-gray-300 pb-2">
