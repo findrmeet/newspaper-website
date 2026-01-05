@@ -29,7 +29,7 @@ export default function Home() {
     <>
       <h2 className="p-2 bg-[#0064F71A] sm:hidden">All Bangla Newspapers</h2>
       <div className="w-[50%] bg-[#0064F7] h-0.5  sm:hidden"></div>
-      <div className="sm:flex gap-4 grid grid-cols-2 sm:flex-wrap sm:mt-0 mt-4">
+      <div className="grid grid-cols-2  md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-[repeat(auto-fit,minmax(160px,1fr))] gap-4 sm:mt-0 mt-4">
         {newspaperData &&
           newspaperData.map((newspaper, index) => (
             <Card
